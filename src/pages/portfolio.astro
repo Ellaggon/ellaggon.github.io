@@ -1,0 +1,26 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Cards from '../components/Cards.astro';
+
+const allPosts = await Astro.glob("../content/*.md");
+---
+
+<Layout title="portfolio">
+  <section>
+    <h1 class="text-white text-center text-2xl font-bold my-5">
+      PORTFOLIO
+    </h1>
+    <hr />
+    <div class="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:gap-8 mt-10">
+      { allPosts.map((el) => 
+      <Cards 
+        title={ el?.frontmatter.title }
+        time={ el?.frontmatter.pubDate }
+        description={ el?.frontmatter.description }
+        tags={ el?.frontmatter.tags }
+        img={ el?.frontmatter.img }
+        url={ el?.frontmatter.url }
+      />) }
+    </div>
+  </section>
+</Layout>

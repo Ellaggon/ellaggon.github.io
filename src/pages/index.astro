@@ -1,18 +1,11 @@
 ---
-import Card from '../components/Card.astro';
 import Layout from '../layouts/Layout.astro';
-
-const allPosts = await Astro.glob("../content/*.md");
 ---
 
-<Layout title="Portfolio to Launcher.">
-  <div class="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:gap-8">
-  { allPosts.map((el) => 
-  <Card 
-    title={ el?.frontmatter.title }
-    time={ el?.frontmatter.pubDate }
-    tags={ el?.frontmatter.tags }
-  />) }
+<Layout title="Portfolio to Launcher">
+  <div class="mx-auto text-center mb-8 lg:mb-16">
+    <h2 class="text-white text-6xl font-bold mt-10 md:mt-0">Ellioth Aguirre</h2>
+    <p class="text-gray-400 mt-3">Frontend Developer </p>
   </div>
 </Layout>
 
