@@ -1,6 +1,6 @@
 ---
 title: "My First Page"
-layout: "../layouts/Layout.astro"
+layout: "../layouts/Base.astro"
 ---
 
 ## About Me
@@ -9,3 +9,5 @@ layout: "../layouts/Layout.astro"
 
 
 Passionate about web development and knowledgeable in HTML, CSS, SASS, JavaScript, React and NodeJS. Active Platzi student with several certifications in the Front-End area. Able to create responsive, dynamic and attractive websites for different types of clients and users. Eager to learn new technologies and tools to improve my skills and contribute to the success of the company.
+
+

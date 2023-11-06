@@ -5,5 +5,6 @@ description: "This project was created thanks to Platzi from a fake store using 
 img: "/img/portfolio-shopi.png"
 tags: ["HTML", "CSS", "Tailwind", "Javascript", "React"]
 url: "https://soft-starburst-84fc43.netlify.app/"
+repository: "https://github.com/Ellaggon/shop-class"
 ---
 
