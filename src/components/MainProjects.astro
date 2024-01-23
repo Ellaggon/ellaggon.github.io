@@ -1,0 +1,87 @@
+---
+import NextJS from "./icons/NextJS.astro";
+import ReactJS from "./icons/ReactJS.astro";
+import Tailwind from "./icons/Tailwind.astro";
+import GitHubCards from "./icons/GitHubCards.astro";
+import LinkButton from "./LinkButton.astro";
+
+const TAGS = {
+  NEXT: {
+    name: "Next.js",
+    class: "bg-black text-white",
+    icon: NextJS,
+  },
+  TAILWIND: {
+    name: "Tailwind",
+    class: "bg-[#003159] text-white",
+    icon: Tailwind,
+  },
+  REACT: {
+    name: "React",
+    class: "bg-[#61DAFB]/30 text-white",
+    icon: ReactJS,
+  },
+};
+
+const PROJECTS = [
+  {
+    title: "Fastline",
+    description: "Una pargina web que las personas o empresas puedan ",
+    img: "https://i.imgur.com/9r2pTKO.jpg",
+    tags: [TAGS.REACT, TAGS.TAILWIND],
+    url: "https://fancy-syrniki-934b11.netlify.app/",
+    repository: "https://github.com/Ellaggon/fastline",
+  },
+  {
+    title: "Akeus",
+    description: "Tienda online de ropa y accesorios para hombres",
+    img: "https://i.imgur.com/tNokVZS.jpg",
+    tags: [TAGS.NEXT, TAGS.TAILWIND],
+    url: "https://akeusshop.vercel.app/",
+    repository: "https://github.com/Ellaggon/Akeus",
+  },
+];
+---
+
+<section class="flex flex-col">
+  {
+    PROJECTS.map(({ title, description, img, tags, url, repository }) => (
+      <article class="text-white">
+        <h3 class="text-2xl text-yellow-800 dark:text-yellow-500 font-semibold mb-2 mt-8">
+          {title}
+        </h3>
+        <p class="text-pretty mb-4 text-lg">{description}</p>
+        <ul class="flex flex-row justify-end mb-2 gap-x-2 mr-4">
+          {tags.map((tag) => (
+            <li>
+              <span
+                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}
+              >
+                <tag.icon class="w-4 h-4" />
+                {tag.name}
+              </span>
+            </li>
+          ))}
+        </ul>
+        <img
+          src={img}
+          alt={`Captura de pantalla de proyecto ${title}`}
+          class="rounded-xl opacity-70"
+        />
+        <div class="flex justify-between">
+          <div class="flex">
+            <a href={repository}>
+              <GitHubCards/>
+            </a>
+            <LinkButton href={url}>
+              Ir al sitio web
+            </LinkButton>
+          </div>
+          <LinkButton href="/projects">
+            Ver más Proyectos ➤
+          </LinkButton>
+        </div>
+      </article>
+    ))
+  }
+</section>

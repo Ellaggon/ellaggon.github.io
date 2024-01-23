@@ -1,0 +1,19 @@
+---
+export function scrollSpy() {
+    const $sections = document.querySelectorAll("section[data-scroll-spy]")
+  
+    const cb = (entries) => {
+      console.log("entries", entries)
+      console.log("hello")
+    }
+  }
+---
+
+<article class="relative w-full">
+  <nav class="hidden fixed lg:right-10 xl:right-28 lg:flex flex-col max-w-48 px-2 text-white">
+    <h1 class="mb-5 text-gray-400 text-sm">EN ESTA PAGINA</h1>
+    <a href="#section1" class="py-2 hover:underline">Presentación</a>
+    <a href="#section2" class="py-2 hover:underline">Proyectos</a>
+    <a href="#section3" class="py-2 hover:underline">Sobre mi</a>
+  </nav>
+</article>

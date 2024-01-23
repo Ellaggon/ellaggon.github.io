@@ -1,226 +1,35 @@
 ---
 import HeaderButton from "./HeaderButton.astro";
+import InicioIcon from "./icons/HomeIcon.astro";
+import ArchievementsIcon from "./icons/ArchievementsIcon.astro";
+import ProjectsIcon from "./icons/ProjectsIcon.astro";
 ---
 
-<header class="relative py-5 mx-auto max-w-full lg:py-16 lg:px-6 z-10">
-  <nav class="flex items-center justify-center text-center w-full">
-    <!-- burger button  -->
-    <a href="#menu" class="fixed right-0 top-0 mt-5 mr-5">
-      <svg
-        class="flex justify-self-end md:hidden"
-        width="44"
-        height="44"
-        viewBox="0 0 24 24"
-        stroke-width="1.5"
-        stroke="white"
-        fill="none"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      >
-        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-        <path d="M4 6l16 0"></path>
-        <path d="M4 12l16 0"></path>
-        <path d="M4 18l16 0"></path>
-      </svg>
+<header class="
+  flex items-center justify-center text-center 
+  sticky top-0 py-5 mx-auto max-w-full lg:px-6 z-10 mb-10">
+  <nav class="rounded-2xl bg-black bg-opacity-40 py-1 px-3">
+
+    <a href="/" class="transition">
+      <HeaderButton>
+        <InicioIcon />
+        <p class="text-sm">Inicio</p>
+      </HeaderButton>
     </a>
-    <!-- desplegable navbar -->
-    <div
-      id="menu"
-      class="fixed left-0 bottom-0 top-0 bg-black right-0 grid place-items-center md:hidden links_btn"
-    >
-      <a href="#" class="fixed right-0 top-0 mt-5 mr-5 md:hidden">
-        <svg
-          width="44"
-          height="44"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="#ffffff"
-          fill="none"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-          <path d="M18 6l-12 12"></path>
-          <path d="M6 6l12 12"></path>
-        </svg>
-      </a>
-      <a href="/portfolio" class="mt-20">
-        <HeaderButton>
-          <svg
-            width="40"
-            height="40"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="white"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-            <path
-              d="M4 13a8 8 0 0 1 7 7a6 6 0 0 0 3 -5a9 9 0 0 0 6 -8a3 3 0 0 0 -3 -3a9 9 0 0 0 -8 6a6 6 0 0 0 -5 3"
-            ></path>
-            <path d="M7 14a6 6 0 0 0 -3 6a6 6 0 0 0 6 -3"></path>
-            <path d="M15 9m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
-          </svg>
-          <p class="w-40">Portfolio</p>
-          <svg width="26" height="26" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-            <path d="M3 3m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" />
-            <path d="M9 11l3 3l3 -3" />
-          </svg>
-        </HeaderButton>
-      </a>
-      <a href="/archievements">
-        <HeaderButton>
-          <svg
-            width="44"
-            height="44"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="white"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-            <path d="M15 15m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
-            <path d="M13 17.5v4.5l2 -1.5l2 1.5v-4.5"></path>
-            <path
-              d="M10 19h-5a2 2 0 0 1 -2 -2v-10c0 -1.1 .9 -2 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -1 1.73"
-            ></path>
-            <path d="M6 9l12 0"></path>
-            <path d="M6 12l3 0"></path>
-            <path d="M6 15l2 0"></path>
-          </svg>
-          <p class="w-40">Archievements</p>
-          <svg width="26" height="26" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-            <path d="M3 3m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" />
-            <path d="M9 11l3 3l3 -3" />
-          </svg>
-        </HeaderButton>
-      </a>
-      <a href="/" class="">
-        <HeaderButton>
-          <svg width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-            <path d="M5 12l-2 0l9 -9l9 9l-2 0" />
-            <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
-            <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
-          </svg>
-          <p class="w-40">Home</p>
-          <svg width="26" height="26" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-            <path d="M3 3m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" />
-            <path d="M9 11l3 3l3 -3" />
-          </svg>
-        </HeaderButton>
-      </a>
-      <a href="/about">
-        <HeaderButton>
-          <svg
-            width="44"
-            height="44"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="#ffffff"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-            <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0"></path>
-            <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"></path>
-          </svg>
-          <p class="w-40">About Me</p>
-          <svg width="26" height="26" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-            <path d="M3 3m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" />
-            <path d="M9 11l3 3l3 -3" />
-          </svg>
-        </HeaderButton>
-      </a>   
-      
-    </div>
-    <!-- outsider navbar -->
-    <div class="hidden md:grid grid-cols-3 rounded-md shadow-sm shadow-slate-800 px-20">
-      <a href="/portfolio">
-        <HeaderButton>
-          <svg
-            width="44"
-            height="44"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="white"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-            <path
-              d="M4 13a8 8 0 0 1 7 7a6 6 0 0 0 3 -5a9 9 0 0 0 6 -8a3 3 0 0 0 -3 -3a9 9 0 0 0 -8 6a6 6 0 0 0 -5 3"
-            ></path>
-            <path d="M7 14a6 6 0 0 0 -3 6a6 6 0 0 0 6 -3"></path>
-            <path d="M15 9m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
-          </svg>
-          <p class="w-30">Portfolio</p>
-        </HeaderButton>
-      </a>
-      <a href="/archievements">
-        <HeaderButton>
-          <svg
-            width="44"
-            height="44"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="white"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-            <path d="M15 15m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
-            <path d="M13 17.5v4.5l2 -1.5l2 1.5v-4.5"></path>
-            <path
-              d="M10 19h-5a2 2 0 0 1 -2 -2v-10c0 -1.1 .9 -2 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -1 1.73"
-            ></path>
-            <path d="M6 9l12 0"></path>
-            <path d="M6 12l3 0"></path>
-            <path d="M6 15l2 0"></path>
-          </svg>
-          <p class="w-30">Archievements</p>
-        </HeaderButton>
-      </a>
-      <a href="/">
-        <HeaderButton>
-          <svg
-            width="44"
-            height="44"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="#ffffff"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-            <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0"></path>
-            <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"></path>
-          </svg>
-          <p class="w-30">About Me</p>
-        </HeaderButton>
-      </a>
-    </div>
+    <a href="/projects">
+      <HeaderButton>
+        <ProjectsIcon />
+        <p class="text-sm">Proyectos</p>
+      </HeaderButton>
+    </a>
+    <a href="/certificates">
+      <HeaderButton>
+        <ArchievementsIcon />
+        <p class="text-sm">Certificados</p>
+      </HeaderButton>
+    </a>
+
   </nav>
 </header>
 
-<style>
-  .links_btn {
-    clip-path: circle(0% at top right);
-    transition: clip-path 0.4s;
-  }
-  .links_btn:target {
-    clip-path: circle(150% at top right);
-  }
-</style>
+

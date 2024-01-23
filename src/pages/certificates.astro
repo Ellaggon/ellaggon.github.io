@@ -1,0 +1,151 @@
+---
+import ScrollSpy from "../components/ScrollSpy.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Ellaggon archievements" description="Certificados de estudio">
+
+      <h1 class="text-white text-center text-2xl font-bold my-5 mt-20">FRONTEND</h1>
+    <hr />
+    <section class="section-grid-1 grid gap-5 mt-10 mb-20">
+      <div class="item item-1">
+        <img src="https://i.imgur.com/6LafKIq.jpg" alt="React Profesional" />
+      </div>
+      <div class="item item-2">
+        <img src="https://i.imgur.com/K9P3xCD.jpg" alt="typescript" />
+      </div>
+      <div class="item item-3">
+        <img src="https://i.imgur.com/pDrWL9x.png" alt="Mobile First" />
+      </div>
+      <div class="item item-4">
+        <img src="https://i.imgur.com/ue8BsCN.png" alt="Frontend Developer" />
+      </div>
+      <div class="item item-5">
+        <img src="https://i.imgur.com/qQURlMD.png" alt="Diseño" />
+      </div>
+      <div class="item item-6">
+        <img src="https://i.imgur.com/B742hic.png" alt="Grid Layout" />
+      </div>
+      <div class="item item-7">
+        <img src="https://i.imgur.com/4YPe4kt.png" alt="Maquetación" />
+      </div>
+      <div class="item item-8">
+        <img src="https://i.imgur.com/rB8EPS4.png" alt="Javascript" />
+      </div>
+      <div class="item item-9">
+        <img src="https://i.imgur.com/SeE67br.png" alt="Figma" />
+      </div>
+      <div class="item item-10">
+        <img
+          src="https://i.imgur.com/EgB7GKC.jpg"
+          alt="Tailwind, Vite y React"
+        />
+      </div>
+    </section>
+    <h1 class="text-white text-center text-2xl font-bold my-5">BACKEND</h1>
+    <hr />
+    <section class="section-grid-2 grid gap-5 mt-10 mb-20">
+      <div class="item item-1">
+        <img src="https://i.imgur.com/VFfnLvT.jpg" alt="Vite" />
+      </div>
+      <div class="item item-2">
+        <img src="https://i.imgur.com/sLrhs05.jpg" alt="  backend" />
+      </div>
+      <div class="item item-3">
+        <img src="https://i.imgur.com/lxzJvRG.jpg" alt="Base de Datos" />
+      </div>
+      <div class="item item-4">
+        <img src="https://i.imgur.com/D7EZInh.jpg" alt="Git y Github" />
+      </div>
+    </section>
+    <h1 class="text-white text-center text-2xl font-bold my-5">COMPLEMENTOS</h1>
+    <hr />
+    <section class="section-grid-3 grid gap-5 mt-10 mb-20">
+      <div class="item item-1">
+        <img src="https://i.imgur.com/2qYAa5N.png" alt="Pre-works" />
+      </div>
+      <div class="item item-2">
+        <img src="https://i.imgur.com/JyUbo9J.png" alt="Defi" />
+      </div>
+      <div class="item item-3">
+        <img
+          src="https://i.imgur.com/LMVGrzQ.png"
+          alt="Finanzas Descentralizadas"
+        />
+      </div>
+      <div class="item item-4">
+        <img
+          src="https://i.imgur.com/2GLeXXK.jpg"
+          alt="Supervisor de Seguridad"
+        />
+    </section>
+    <ScrollSpy client:load/>
+    </div>
+</Layout>
+
+<style>
+  .item {
+    position: relative;
+    opacity: 0.8;
+    border-radius: 0.75rem;
+    cursor: pointer;
+  }
+  .item img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.75rem;
+    object-fit: cover;
+    transition: 0.3s ease-in-out;
+  }
+  .item img:hover {
+    transform: scale(0.9);
+  }
+  .item-1 {
+    grid-area: 1/1/4/4;
+  }
+  .item-2 {
+    grid-area: 1/4/5/6;
+  }
+  .item-3 {
+    grid-area: 4/1/7/3;
+  }
+  .item-4 {
+    grid-area: 5/3/7/6;
+  }
+  .item-5 {
+    grid-area: 7/1/9/4;
+  }
+  .item-6 {
+    grid-area: 7/4/11/6;
+  }
+  .item-7 {
+    grid-area: 9/1/12/3;
+  }
+  .item-8 {
+    grid-area: 11/3/14/6;
+  }
+  .item-9 {
+    grid-area: 12/1/15/3;
+  }
+  .item-10 {
+    grid-area: 14/3/15/6;
+  }
+  @media (min-width: 601px) {
+    .section-grid-1{
+    grid-template-columns: 110px 110px 110px 110px 110px;
+    grid-template-rows: 55px 55px 55px 55px 55px 55px 55px 55px 55px 55px 55px 55px 55px 55px;
+    place-content: center;
+  }
+  .section-grid-2{
+    grid-template-columns: 110px 110px 110px 110px 110px;
+    grid-template-rows: 55px 55px 55px 55px 55px 55px;
+    place-content: center;
+  }
+  .section-grid-3{
+    grid-template-columns: 110px 110px 110px 110px 110px;
+    grid-template-rows: 55px 55px 55px 55px 55px 55px 55px;
+    place-content: center;
+  }
+  }
+</style>
