@@ -1,9 +1,8 @@
 ---
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
-import ScrollSpy from "../components/ScrollSpy.astro";
 
-interface Props {
+export interface Props {
   title: string;
 	description: string;
 }
@@ -25,8 +24,7 @@ const { title, description } = Astro.props;
   <body class="relative h-full w-full bg-black">
 		<div class="fixed top-0 z-[-20] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(20,19,198,0.3),rgba(255,255,255,0))]"></div>
 		<Header />
-		<ScrollSpy />
-		<main class=" sm:max-w-3xl px-3 xl:m-auto flex flex-col">
+		<main class="sm:max-w-3xl md:m-auto px-3 lg:pr-10 xl:m-auto flex flex-col">
 			<slot />
 		</main>
 		<Footer />

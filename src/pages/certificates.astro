@@ -1,84 +1,104 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import ScrollSpyCertificates from "../components/ScrollSpyCertificates.astro"
+
+export const SECTIONS = [
+  { id: "#section-1", title: "Presentacion" },
+  { id: "#section-2", title: "Proyectos" },
+  { id: "#section-3", title: "Sobre Mi" },
+];
 ---
 
 <Layout title="Ellaggon archievements" description="Certificados de estudio">
+  <ScrollSpyCertificates />
 
-      <h1 class="text-white text-center text-2xl font-bold my-5 mt-20 section">FRONTEND</h1>
-    <hr />
-    <section class="section-grid-1 grid gap-5 mt-10 mb-20" id="section-1">
-      <div class="item item-1">
-        <img src="https://i.imgur.com/6LafKIq.jpg" alt="React Profesional" />
-      </div>
-      <div class="item item-2">
-        <img src="https://i.imgur.com/K9P3xCD.jpg" alt="typescript" />
-      </div>
-      <div class="item item-3">
-        <img src="https://i.imgur.com/pDrWL9x.png" alt="Mobile First" />
-      </div>
-      <div class="item item-4">
-        <img src="https://i.imgur.com/ue8BsCN.png" alt="Frontend Developer" />
-      </div>
-      <div class="item item-5">
-        <img src="https://i.imgur.com/qQURlMD.png" alt="Diseño" />
-      </div>
-      <div class="item item-6">
-        <img src="https://i.imgur.com/B742hic.png" alt="Grid Layout" />
-      </div>
-      <div class="item item-7">
-        <img src="https://i.imgur.com/4YPe4kt.png" alt="Maquetación" />
-      </div>
-      <div class="item item-8">
-        <img src="https://i.imgur.com/rB8EPS4.png" alt="Javascript" />
-      </div>
-      <div class="item item-9">
-        <img src="https://i.imgur.com/SeE67br.png" alt="Figma" />
-      </div>
-      <div class="item item-10">
-        <img
-          src="https://i.imgur.com/EgB7GKC.jpg"
-          alt="Tailwind, Vite y React"
-        />
-      </div>
-    </section>
-    <h1 class="text-white text-center text-2xl font-bold my-5 section">BACKEND</h1>
-    <hr />
-    <section class="section-grid-2 grid gap-5 mt-10 mb-20" id="section-2">
-      <div class="item item-1">
-        <img src="https://i.imgur.com/VFfnLvT.jpg" alt="Vite" />
-      </div>
-      <div class="item item-2">
-        <img src="https://i.imgur.com/sLrhs05.jpg" alt="  backend" />
-      </div>
-      <div class="item item-3">
-        <img src="https://i.imgur.com/lxzJvRG.jpg" alt="Base de Datos" />
-      </div>
-      <div class="item item-4">
-        <img src="https://i.imgur.com/D7EZInh.jpg" alt="Git y Github" />
-      </div>
-    </section>
-    <h1 class="text-white text-center text-2xl font-bold my-5 section">COMPLEMENTOS</h1>
-    <hr />
-    <section class="section-grid-3 grid gap-5 mt-10 mb-20" id="section-3">
-      <div class="item item-1">
-        <img src="https://i.imgur.com/2qYAa5N.png" alt="Pre-works" />
-      </div>
-      <div class="item item-2">
-        <img src="https://i.imgur.com/JyUbo9J.png" alt="Defi" />
-      </div>
-      <div class="item item-3">
-        <img
-          src="https://i.imgur.com/LMVGrzQ.png"
-          alt="Finanzas Descentralizadas"
-        />
-      </div>
-      <div class="item item-4">
-        <img
-          src="https://i.imgur.com/2GLeXXK.jpg"
-          alt="Supervisor de Seguridad"
-        />
-    </section>
+  <h1
+    class="text-white text-center text-2xl font-bold my-5 mt-20 section"
+    id="section-1"
+  >
+    FRONTEND
+  </h1>
+  <hr />
+  <section class="section-grid-1 grid gap-5 mt-10 mb-20">
+    <div class="item item-1">
+      <img src="https://i.imgur.com/6LafKIq.jpg" alt="React Profesional" />
     </div>
+    <div class="item item-2">
+      <img src="https://i.imgur.com/K9P3xCD.jpg" alt="typescript" />
+    </div>
+    <div class="item item-3">
+      <img src="https://i.imgur.com/pDrWL9x.png" alt="Mobile First" />
+    </div>
+    <div class="item item-4">
+      <img src="https://i.imgur.com/ue8BsCN.png" alt="Frontend Developer" />
+    </div>
+    <div class="item item-5">
+      <img src="https://i.imgur.com/qQURlMD.png" alt="Diseño" />
+    </div>
+    <div class="item item-6">
+      <img src="https://i.imgur.com/B742hic.png" alt="Grid Layout" />
+    </div>
+    <div class="item item-7">
+      <img src="https://i.imgur.com/4YPe4kt.png" alt="Maquetación" />
+    </div>
+    <div class="item item-8">
+      <img src="https://i.imgur.com/rB8EPS4.png" alt="Javascript" />
+    </div>
+    <div class="item item-9">
+      <img src="https://i.imgur.com/SeE67br.png" alt="Figma" />
+    </div>
+    <div class="item item-10">
+      <img src="https://i.imgur.com/EgB7GKC.jpg" alt="Tailwind, Vite y React" />
+    </div>
+  </section>
+  <h1
+    class="text-white text-center text-2xl font-bold my-5 section"
+    id="section-2"
+  >
+    BACKEND
+  </h1>
+  <hr />
+  <section class="section-grid-2 grid gap-5 mt-10 mb-20">
+    <div class="item item-1">
+      <img src="https://i.imgur.com/VFfnLvT.jpg" alt="Vite" />
+    </div>
+    <div class="item item-2">
+      <img src="https://i.imgur.com/sLrhs05.jpg" alt="  backend" />
+    </div>
+    <div class="item item-3">
+      <img src="https://i.imgur.com/lxzJvRG.jpg" alt="Base de Datos" />
+    </div>
+    <div class="item item-4">
+      <img src="https://i.imgur.com/D7EZInh.jpg" alt="Git y Github" />
+    </div>
+  </section>
+  <h1
+    class="text-white text-center text-2xl font-bold my-5 section"
+    id="section-3"
+  >
+    COMPLEMENTOS
+  </h1>
+  <hr />
+  <section class="section-grid-3 grid gap-5 mt-10 mb-20">
+    <div class="item item-1">
+      <img src="https://i.imgur.com/2qYAa5N.png" alt="Pre-works" />
+    </div>
+    <div class="item item-2">
+      <img src="https://i.imgur.com/JyUbo9J.png" alt="Defi" />
+    </div>
+    <div class="item item-3">
+      <img
+        src="https://i.imgur.com/LMVGrzQ.png"
+        alt="Finanzas Descentralizadas"
+      />
+    </div>
+    <div class="item item-4">
+      <img
+        src="https://i.imgur.com/2GLeXXK.jpg"
+        alt="Supervisor de Seguridad"
+      />
+    </div>
+  </section>
 </Layout>
 
 <style>
@@ -130,20 +150,20 @@ import Layout from "../layouts/Layout.astro";
     grid-area: 14/3/15/6;
   }
   @media (min-width: 601px) {
-    .section-grid-1{
-    grid-template-columns: 110px 110px 110px 110px 110px;
-    grid-template-rows: 55px 55px 55px 55px 55px 55px 55px 55px 55px 55px 55px 55px 55px 55px;
-    place-content: center;
-  }
-  .section-grid-2{
-    grid-template-columns: 110px 110px 110px 110px 110px;
-    grid-template-rows: 55px 55px 55px 55px 55px 55px;
-    place-content: center;
-  }
-  .section-grid-3{
-    grid-template-columns: 110px 110px 110px 110px 110px;
-    grid-template-rows: 55px 55px 55px 55px 55px 55px 55px;
-    place-content: center;
-  }
+    .section-grid-1 {
+      grid-template-columns: 110px 110px 110px 110px 110px;
+      grid-template-rows: 55px 55px 55px 55px 55px 55px 55px 55px 55px 55px 55px 55px 55px 55px;
+      place-content: center;
+    }
+    .section-grid-2 {
+      grid-template-columns: 110px 110px 110px 110px 110px;
+      grid-template-rows: 55px 55px 55px 55px 55px 55px;
+      place-content: center;
+    }
+    .section-grid-3 {
+      grid-template-columns: 110px 110px 110px 110px 110px;
+      grid-template-rows: 55px 55px 55px 55px 55px 55px 55px;
+      place-content: center;
+    }
   }
 </style>

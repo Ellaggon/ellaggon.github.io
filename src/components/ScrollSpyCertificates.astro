@@ -1,0 +1,32 @@
+---
+
+const SECTIONS = [
+  {id: "#section-1", title: "Frontend"},
+  {id: "#section-2", title: "Backend"},
+  {id: "#section-3", title: "Complementos"},
+];
+---
+
+<article class="relative w-full">
+  <nav
+  class="hidden fixed lg:right-16 xl:right-28 lg:flex flex-col max-w-48 px-2 text-white"
+  id="enlaces"
+  >
+  <h1 class="mb-10 text-sm">EN ESTA PAGINA</h1>
+  {
+    SECTIONS?.map((section)=> (
+      <a
+        href={section.id}
+        class="py-2 hover:underline text-gray-400"
+        data-astro-history="push">
+          {section.title}
+      </a>
+    ))
+  }
+  </nav>
+</article>
+<style>
+  nav .activo{
+    color: #E9B40A;
+  }
+</style>
