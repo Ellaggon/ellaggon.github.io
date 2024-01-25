@@ -1,13 +1,12 @@
 ---
-import ScrollSpy from "../components/ScrollSpy.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Ellaggon archievements" description="Certificados de estudio">
 
-      <h1 class="text-white text-center text-2xl font-bold my-5 mt-20">FRONTEND</h1>
+      <h1 class="text-white text-center text-2xl font-bold my-5 mt-20 section">FRONTEND</h1>
     <hr />
-    <section class="section-grid-1 grid gap-5 mt-10 mb-20">
+    <section class="section-grid-1 grid gap-5 mt-10 mb-20" id="section-1">
       <div class="item item-1">
         <img src="https://i.imgur.com/6LafKIq.jpg" alt="React Profesional" />
       </div>
@@ -42,9 +41,9 @@ import Layout from "../layouts/Layout.astro";
         />
       </div>
     </section>
-    <h1 class="text-white text-center text-2xl font-bold my-5">BACKEND</h1>
+    <h1 class="text-white text-center text-2xl font-bold my-5 section">BACKEND</h1>
     <hr />
-    <section class="section-grid-2 grid gap-5 mt-10 mb-20">
+    <section class="section-grid-2 grid gap-5 mt-10 mb-20" id="section-2">
       <div class="item item-1">
         <img src="https://i.imgur.com/VFfnLvT.jpg" alt="Vite" />
       </div>
@@ -58,9 +57,9 @@ import Layout from "../layouts/Layout.astro";
         <img src="https://i.imgur.com/D7EZInh.jpg" alt="Git y Github" />
       </div>
     </section>
-    <h1 class="text-white text-center text-2xl font-bold my-5">COMPLEMENTOS</h1>
+    <h1 class="text-white text-center text-2xl font-bold my-5 section">COMPLEMENTOS</h1>
     <hr />
-    <section class="section-grid-3 grid gap-5 mt-10 mb-20">
+    <section class="section-grid-3 grid gap-5 mt-10 mb-20" id="section-3">
       <div class="item item-1">
         <img src="https://i.imgur.com/2qYAa5N.png" alt="Pre-works" />
       </div>
@@ -79,7 +78,6 @@ import Layout from "../layouts/Layout.astro";
           alt="Supervisor de Seguridad"
         />
     </section>
-    <ScrollSpy client:load/>
     </div>
 </Layout>
 
