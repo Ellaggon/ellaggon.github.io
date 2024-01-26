@@ -1,6 +1,6 @@
 ---
   title: "Fastline"
-  description: "Una pargina web que las personas o empresas puedan "
+  description: "Una plataforma en linea que se utiliza para publicar anuncios clasificados relacionado con el servicio de transporte local."
   img: "https://i.imgur.com/9r2pTKO.jpg"
   tags: ["REACTJS", "TAILWIND"]
   url: "https://fancy-syrniki-934b11.netlify.app/"
