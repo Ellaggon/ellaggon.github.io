@@ -1,0 +1,58 @@
+---
+const { title, certificates, id } = Astro.props
+---
+
+<h2 class="text-white text-center text-2xl font-bold my-5 mt-20 section" id={id}>
+    { title }
+</h2>
+<hr />
+<section class="grid gap-5 mt-10 mb-20 grid-cols-2 md:grid-cols-4">
+  {
+    certificates.map((cert) => (
+      <div class="relative rounded-xl overflow-hidden hover:scale-110 hover:opacity-95 transition duration-300 cursor-pointer" >
+        <img 
+            src={cert.src} alt={cert.alt} class="w-full h-fill object-cover img" data-src={cert.src} data-alt={cert.alt}/>
+      </div>
+    ))
+  }
+</section>
+
+<div id="modal" class="fixed flex inset-0 bg-black/50 justify-center items-center z-10 hidden">
+  <div class="relative max-w-3xl w-full p-10">
+    <button id="modalBtn" class="absolute top-0 right-0 text-white text-4xl">&times;</button>
+    <img id="modalImg" src="" alt="" class="w-full h-auto rounded shadow-lg">
+  </div>
+</div>
+
+<script>
+  const $img = document.querySelectorAll("img.img")
+  const $modal = document.getElementById("modal")
+  const $modalImg = document.getElementById("modalImg") as HTMLImageElement
+  const $modalBtn = document.getElementById("modalBtn")
+  
+  $img.forEach((img) => {
+      img.addEventListener("click", () => {
+        const src = img.getAttribute("data-src")
+        const alt = img.getAttribute("data-alt")
+
+        $modalImg.src = src
+        $modalImg.alt = alt
+        $modal.classList.remove("hidden")
+        $modal.classList.add("flex")
+
+        document.body.classList.add("no-scroll")
+      })
+    })
+
+    $modalBtn.addEventListener("click", () => {
+      $modal.classList.add("hidden")
+      $modal.classList.remove("flex")
+    })
+    
+    window.addEventListener("click", (e) => {
+      if(e.target === $modal){
+        $modal.classList.add("hidden")
+        $modal.classList.remove("flex")
+      }
+    })
+</script>
