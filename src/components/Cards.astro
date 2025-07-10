@@ -14,11 +14,11 @@ export interface Props {
 const { description, time, title, tags, img, url, repository } = Astro.props;
 ---
 
-<article class="relative mb-10 rounded-xl">
+<article class="relative mb-10 ">
   <a
     href={url}
     target="_blank"
-    class="relative group block bg-black lg:h-96 h-80"
+    class="relative group block bg-black lg:h-96 h-80 rounded-xl"
   >
     <img
       alt={title}
